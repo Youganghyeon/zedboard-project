@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/USER/lcd_ctrl_recent/lcd_ctrl_recent.srcs/sources_1/new/lcd_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lcd_ctrl
+INFO: [VRFC 10-311] analyzing module lcd_pic
+INFO: [VRFC 10-311] analyzing module lcd_colorbar_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/USER/lcd_ctrl_recent/lcd_ctrl_recent.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

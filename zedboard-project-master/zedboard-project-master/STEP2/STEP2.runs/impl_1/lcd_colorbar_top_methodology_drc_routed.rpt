@@ -1,0 +1,47 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Fri May  8 12:07:40 2026
+| Host         : DESKTOP-O1S0IG8 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file lcd_colorbar_top_methodology_drc_routed.rpt -pb lcd_colorbar_top_methodology_drc_routed.pb -rpx lcd_colorbar_top_methodology_drc_routed.rpx
+| Design       : lcd_colorbar_top
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 1
++---------+----------+------------------------------+------------+
+| Rule    | Severity | Description                  | Violations |
++---------+----------+------------------------------+------------+
+| LUTAR-1 | Warning  | LUT drives async reset alert | 1          |
++---------+----------+------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell lcd_pic_inst/FSM_onehot_state[2]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) lcd_pic_inst/clk_div_reg[22]/CLR, lcd_pic_inst/clk_div_reg[23]/CLR,
+lcd_pic_inst/clk_div_reg[24]/CLR, lcd_pic_inst/clk_div_reg[25]/CLR,
+lcd_pic_inst/clk_div_reg[26]/CLR, lcd_pic_inst/clk_div_reg[2]/CLR,
+lcd_pic_inst/clk_div_reg[3]/CLR, lcd_pic_inst/clk_div_reg[4]/CLR,
+lcd_pic_inst/clk_div_reg[5]/CLR, lcd_pic_inst/clk_div_reg[6]/CLR,
+lcd_pic_inst/clk_div_reg[7]/CLR, lcd_pic_inst/clk_div_reg[8]/CLR,
+lcd_pic_inst/clk_div_reg[9]/CLR, lcd_pic_inst/fall_tick_reg/CLR,
+lcd_pic_inst/pix_data_reg[15]/CLR (the first 15 of 75 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+
