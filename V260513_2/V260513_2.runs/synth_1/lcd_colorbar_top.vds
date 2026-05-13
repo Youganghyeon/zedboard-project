@@ -1,0 +1,280 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed May 13 12:03:55 2026
+# Process ID: 21312
+# Current directory: C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.runs/synth_1
+# Command line: vivado.exe -log lcd_colorbar_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lcd_colorbar_top.tcl
+# Log file: C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.runs/synth_1/lcd_colorbar_top.vds
+# Journal file: C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.runs/synth_1\vivado.jou
+# Running On: DESKTOP-O1S0IG8, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 12, Host memory: 34088 MB
+#-----------------------------------------------------------
+source lcd_colorbar_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 583.105 ; gain = 181.797
+Command: read_checkpoint -auto_incremental -incremental C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.srcs/utils_1/imports/synth_1/lcd_colorbar_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.srcs/utils_1/imports/synth_1/lcd_colorbar_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top lcd_colorbar_top -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10684
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1460.043 ; gain = 441.711
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'lcd_colorbar_top' [C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.srcs/sources_1/new/lcd_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.runs/synth_1/.Xil/Vivado-21312-DESKTOP-O1S0IG8/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.runs/synth_1/.Xil/Vivado-21312-DESKTOP-O1S0IG8/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.srcs/sources_1/new/lcd_ctrl.v:317]
+INFO: [Synth 8-6155] done synthesizing module 'lcd_colorbar_top' (0#1) [C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.srcs/sources_1/new/lcd_ctrl.v:3]
+WARNING: [Synth 8-6014] Unused sequential element curr_block_reg was removed.  [C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.srcs/sources_1/new/lcd_ctrl.v:303]
+WARNING: [Synth 8-3917] design lcd_colorbar_top has port lcd_ud driven by constant 0
+WARNING: [Synth 8-3917] design lcd_colorbar_top has port lcd_bl driven by constant 0
+WARNING: [Synth 8-7129] Port key_in[2] in module lcd_colorbar_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key_in[0] in module lcd_colorbar_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1623.707 ; gain = 605.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1623.707 ; gain = 605.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1623.707 ; gain = 605.375
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1623.707 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_inst'
+Finished Parsing XDC File [c:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz_inst'
+Parsing XDC File [C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.srcs/constrs_1/new/lcd_ctrl.xdc]
+Finished Parsing XDC File [C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.srcs/constrs_1/new/lcd_ctrl.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.srcs/constrs_1/new/lcd_ctrl.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lcd_colorbar_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/lcd_colorbar_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1710.184 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1710.184 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  c:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  c:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for clk_wiz_inst. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'lcd_colorbar_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             STATE_SPAWN |                              001 |                               00
+              STATE_FALL |                              010 |                               01
+             STATE_MERGE |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'lcd_colorbar_top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   2 Input   26 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 223   
++---Muxes : 
+	   2 Input   26 Bit        Muxes := 1     
+	   7 Input   24 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 2     
+	   3 Input    6 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 879   
+	   3 Input    1 Bit        Muxes := 223   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design lcd_colorbar_top has port lcd_ud driven by constant 0
+WARNING: [Synth 8-3917] design lcd_colorbar_top has port lcd_bl driven by constant 0
+WARNING: [Synth 8-7129] Port key_in[2] in module lcd_colorbar_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port key_in[0] in module lcd_colorbar_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:26 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:30 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:31 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:33 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:33 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:33 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:33 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:34 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:34 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |clk_wiz |     1|
+|2     |CARRY4  |   212|
+|3     |LUT1    |   137|
+|4     |LUT2    |   246|
+|5     |LUT3    |   339|
+|6     |LUT4    |   202|
+|7     |LUT5    |   205|
+|8     |LUT6    |   541|
+|9     |MUXF7   |     2|
+|10    |FDCE    |   278|
+|11    |FDPE    |     6|
+|12    |FDRE    |     6|
+|13    |IBUF    |     3|
+|14    |OBUF    |    30|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:34 . Memory (MB): peak = 1710.184 ; gain = 691.852
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:32 . Memory (MB): peak = 1710.184 ; gain = 605.375
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:34 . Memory (MB): peak = 1710.184 ; gain = 691.852
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1710.184 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 214 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'lcd_colorbar_top' is not ideal for floorplanning, since the cellview 'lcd_colorbar_top' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1712.078 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c70edb5c
+INFO: [Common 17-83] Releasing license: Synthesis
+28 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:37 . Memory (MB): peak = 1712.078 ; gain = 1109.551
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1712.078 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260513_2/V260513_2.runs/synth_1/lcd_colorbar_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file lcd_colorbar_top_utilization_synth.rpt -pb lcd_colorbar_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed May 13 12:04:41 2026...
