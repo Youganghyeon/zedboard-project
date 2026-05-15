@@ -3,10 +3,10 @@
 
 ##I O T S
 
-##1 STEP fall the block
+##1 STEP fall the block                                         ＃ Complete
 
 
-##2 STEP move the left and right, button에 따라서 left and right
+##2 STEP move the left and right, button에 따라서 left and right ＃ Complete
 
 
 ##3 STEP various shape
@@ -15,7 +15,7 @@
 ##4 STEP change the angle
 
 
-##5 STEP add block
+##5 STEP add block                                              ＃ Complete
 
 
 ##6 step 블럭 쌓기
