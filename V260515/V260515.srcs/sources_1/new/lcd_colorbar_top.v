@@ -85,16 +85,18 @@ field_calc u_field_calc (
 //------------------------------------------------------------
 // GAME LOGIC
 //------------------------------------------------------------
-wire [3:0] block_x;
-wire [5:0] block_y;
+wire [3:0] cell_x0, cell_x1, cell_x2, cell_x3;
+wire [5:0] cell_y0, cell_y1, cell_y2, cell_y3;
 wire       map_bit;
 
 game_logic u_game_logic (
     .clk     (lcd_clk_33m),
     .rst_n   (rst_n),
     .key_in  (key_in),
-    .block_x (block_x),
-    .block_y (block_y),
+    .cell_x0 (cell_x0), .cell_x1 (cell_x1),
+    .cell_x2 (cell_x2), .cell_x3 (cell_x3),
+    .cell_y0 (cell_y0), .cell_y1 (cell_y1),
+    .cell_y2 (cell_y2), .cell_y3 (cell_y3),
     .rd_h    (h_div),
     .rd_w    (w_div),
     .map_bit (map_bit)
@@ -107,9 +109,11 @@ wire inside_block;
 wire inside_fixed_block;
 
 assign inside_block =
-    inside_field &&
-    (w_div == block_x || w_div == block_x + 1) &&
-    (h_div == block_y || h_div == block_y - 1);
+    inside_field && (
+    (w_div == cell_x0 && h_div == cell_y0) ||
+    (w_div == cell_x1 && h_div == cell_y1) ||
+    (w_div == cell_x2 && h_div == cell_y2) ||
+    (w_div == cell_x3 && h_div == cell_y3));
 
 assign inside_fixed_block =
     inside_field && map_bit;

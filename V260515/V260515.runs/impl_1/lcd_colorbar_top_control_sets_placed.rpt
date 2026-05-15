@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Fri May 15 12:15:11 2026
+| Date         : Fri May 15 13:14:53 2026
 | Host         : DESKTOP-O1S0IG8 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file lcd_colorbar_top_control_sets_placed.rpt
 | Design       : lcd_colorbar_top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     5 |
-|    Minimum number of control sets                        |     5 |
+| Total control sets                                       |     7 |
+|    Minimum number of control sets                        |     7 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    18 |
+| Unused register locations in slices containing registers |    33 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,12 +39,12 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     5 |
+| Total control sets |     7 |
 | >= 0 to < 4        |     0 |
-| >= 4 to < 6        |     1 |
+| >= 4 to < 6        |     3 |
 | >= 6 to < 8        |     1 |
-| >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     2 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
 | >= 16              |     1 |
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               6 |            3 |
-| No           | No                    | Yes                    |             264 |          147 |
+| No           | No                    | No                     |               6 |            4 |
+| No           | No                    | Yes                    |             273 |          119 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              24 |           10 |
+| Yes          | No                    | Yes                    |              32 |           10 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,14 +70,16 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------+---------------------------------+------------------------+------------------+----------------+--------------+
-|         Clock Signal        |          Enable Signal          |    Set/Reset Signal    | Slice Load Count | Bel Load Count | Bels / Slice |
-+-----------------------------+---------------------------------+------------------------+------------------+----------------+--------------+
-|  clk_wiz_inst/inst/clk_out1 | u_game_logic/block_x[3]_i_1_n_0 | u_game_logic/sys_rst_n |                1 |              4 |         4.00 |
-|  clk_wiz_inst/inst/clk_out1 |                                 |                        |                3 |              6 |         2.00 |
-|  clk_wiz_inst/inst/clk_out1 | u_game_logic/block_y[5]_i_1_n_0 | u_game_logic/sys_rst_n |                4 |             10 |         2.50 |
-|  clk_wiz_inst/inst/clk_out1 | u_lcd_timing/cnt_v_0            | u_game_logic/sys_rst_n |                5 |             10 |         2.00 |
-|  clk_wiz_inst/inst/clk_out1 |                                 | u_game_logic/sys_rst_n |              147 |            264 |         1.80 |
-+-----------------------------+---------------------------------+------------------------+------------------+----------------+--------------+
++-----------------------------+------------------------------------------+------------------------+------------------+----------------+--------------+
+|         Clock Signal        |               Enable Signal              |    Set/Reset Signal    | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------+------------------------------------------+------------------------+------------------+----------------+--------------+
+|  clk_wiz_inst/inst/clk_out1 | u_game_logic/FSM_onehot_state[3]_i_1_n_0 | u_game_logic/sys_rst_n |                1 |              4 |         4.00 |
+|  clk_wiz_inst/inst/clk_out1 | u_game_logic/block_x                     | u_game_logic/sys_rst_n |                1 |              4 |         4.00 |
+|  clk_wiz_inst/inst/clk_out1 | u_game_logic/clear_row                   | u_game_logic/sys_rst_n |                1 |              5 |         5.00 |
+|  clk_wiz_inst/inst/clk_out1 |                                          |                        |                4 |              6 |         1.50 |
+|  clk_wiz_inst/inst/clk_out1 | u_game_logic/block_y                     | u_game_logic/sys_rst_n |                2 |              9 |         4.50 |
+|  clk_wiz_inst/inst/clk_out1 | u_lcd_timing/cnt_v_0                     | u_game_logic/sys_rst_n |                5 |             10 |         2.00 |
+|  clk_wiz_inst/inst/clk_out1 |                                          | u_game_logic/sys_rst_n |              119 |            273 |         2.29 |
++-----------------------------+------------------------------------------+------------------------+------------------+----------------+--------------+
 
 
