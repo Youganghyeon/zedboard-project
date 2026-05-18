@@ -1,0 +1,47 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Mon May 18 12:51:52 2026
+| Host         : DESKTOP-O1S0IG8 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file score_display_methodology_drc_routed.rpt -pb score_display_methodology_drc_routed.pb -rpx score_display_methodology_drc_routed.rpx
+| Design       : score_display
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 1
++---------+----------+------------------------------+------------+
+| Rule    | Severity | Description                  | Violations |
++---------+----------+------------------------------+------------+
+| LUTAR-1 | Warning  | LUT drives async reset alert | 1          |
++---------+----------+------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell score_pic_inst/cnt_h[11]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) score_pic_inst/pix_data_reg[23]/CLR, score_pic_inst/score_reg[0]/CLR,
+score_pic_inst/score_reg[10]/CLR, score_pic_inst/score_reg[11]/CLR,
+score_pic_inst/score_reg[12]/CLR, score_pic_inst/score_reg[13]/CLR,
+score_pic_inst/score_reg[1]/CLR, score_pic_inst/score_reg[2]/CLR,
+score_pic_inst/score_reg[3]/CLR, score_pic_inst/score_reg[4]/CLR,
+score_pic_inst/score_reg[5]/CLR, score_pic_inst/score_reg[6]/CLR,
+score_pic_inst/score_reg[7]/CLR, score_pic_inst/score_reg[8]/CLR,
+score_pic_inst/score_reg[9]/CLR (the first 15 of 65 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+
