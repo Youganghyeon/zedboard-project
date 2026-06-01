@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Fri May 15 13:15:21 2026
+| Date         : Mon Jun  1 12:40:35 2026
 | Host         : DESKTOP-O1S0IG8 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file lcd_colorbar_top_methodology_drc_routed.rpt -pb lcd_colorbar_top_methodology_drc_routed.pb -rpx lcd_colorbar_top_methodology_drc_routed.rpx
 | Design       : lcd_colorbar_top
@@ -34,14 +34,14 @@ Table of Contents
 -----------------
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell u_game_logic/FSM_onehot_state[3]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_lcd_timing/cnt_h_reg[5]/CLR, u_lcd_timing/cnt_h_reg[6]/CLR,
-u_lcd_timing/cnt_h_reg[7]/CLR, u_lcd_timing/cnt_h_reg[8]/CLR,
-u_lcd_timing/cnt_h_reg[9]/CLR, u_lcd_timing/cnt_v_reg[0]/CLR,
-u_lcd_timing/cnt_v_reg[1]/CLR, u_lcd_timing/cnt_v_reg[2]/CLR,
-u_lcd_timing/cnt_v_reg[3]/CLR, u_lcd_timing/cnt_v_reg[4]/CLR,
-u_lcd_timing/cnt_v_reg[5]/CLR, u_lcd_timing/cnt_v_reg[6]/CLR,
-u_lcd_timing/cnt_v_reg[7]/CLR, u_lcd_timing/cnt_v_reg[8]/CLR,
-u_lcd_timing/cnt_v_reg[9]/CLR (the first 15 of 305 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell u_game_logic/cnt_h[11]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_lcd_timing/cnt_h_reg[8]/CLR, u_lcd_timing/cnt_h_reg[9]/CLR,
+u_lcd_timing/cnt_v_reg[0]/CLR, u_lcd_timing/cnt_v_reg[1]/CLR,
+u_lcd_timing/cnt_v_reg[2]/CLR, u_lcd_timing/cnt_v_reg[3]/CLR,
+u_lcd_timing/cnt_v_reg[4]/CLR, u_lcd_timing/cnt_v_reg[5]/CLR,
+u_lcd_timing/cnt_v_reg[6]/CLR, u_lcd_timing/cnt_v_reg[7]/CLR,
+u_lcd_timing/cnt_v_reg[8]/CLR, u_lcd_timing/cnt_v_reg[9]/CLR,
+u_score_pic/pix_data_reg[11]/CLR, u_score_pic/pix_data_reg[20]/CLR,
+u_score_pic/pix_data_reg[23]/CLR (the first 15 of 322 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 

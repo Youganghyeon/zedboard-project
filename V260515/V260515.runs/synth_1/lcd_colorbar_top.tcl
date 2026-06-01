@@ -70,7 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
+set_param chipscope.maxJobs 5
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
@@ -95,9 +95,10 @@ read_verilog -library xil_defaultlib {
   C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.srcs/sources_1/new/game_logic.v
   C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.srcs/sources_1/new/lcd_timing.v
   C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.srcs/sources_1/new/renderer.v
+  C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.srcs/sources_1/new/score_pic_inst.v
   C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.srcs/sources_1/new/lcd_colorbar_top.v
 }
-read_ip -quiet c:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+read_ip -quiet C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]

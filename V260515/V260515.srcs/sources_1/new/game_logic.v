@@ -11,7 +11,8 @@ module game_logic (
 
     input  wire [5:0]  rd_h,
     input  wire [3:0]  rd_w,
-    output wire        map_bit
+    output wire        map_bit,
+    output reg [15:0]  score
 );
 
 `define TETRIS_W  10
@@ -30,10 +31,10 @@ reg [2:0] state;
 //------------------------------------------------------------
 // MAP
 //------------------------------------------------------------
-reg [9:0] tetris_map [0:`TETRIS_H-1];
+reg [9:0] tetris_map [0:`TETRIS_H-1]; // teteris_map[0:21]
 
-assign map_bit = tetris_map[rd_h][rd_w];
-
+assign map_bit = tetris_map[rd_h][rd_w]; // teteris_map[h_div][w_div]
+               
 //------------------------------------------------------------
 // CLEAR
 //------------------------------------------------------------
@@ -51,7 +52,7 @@ reg [1:0] rotation;
 // LFSR
 //------------------------------------------------------------
 reg [6:0] lfsr;
-
+//random LFSR.
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) lfsr <= 7'b1010101;
     else        lfsr <= {lfsr[5:0], lfsr[6] ^ lfsr[5]};
@@ -94,7 +95,7 @@ task get_cells;
         endcase
     end
 endtask
-
+//rtos ±¸Çö... system .... 
 //------------------------------------------------------------
 // ÇöÀç ¼¿ ÁÂÇ¥ (combinational)
 //------------------------------------------------------------
@@ -252,6 +253,7 @@ always @(posedge clk or negedge rst_n) begin
         rotation   <= 0;
         state      <= STATE_SPAWN;
         clear_row  <= 0;
+        score      <= 0;
         for (i = 0; i < `TETRIS_H; i = i + 1)
             tetris_map[i] <= 10'b0;
     end
@@ -310,6 +312,9 @@ always @(posedge clk or negedge rst_n) begin
                     if (i >= clear_row)
                         tetris_map[i] <= tetris_map[i + 1];
                 tetris_map[`TETRIS_H - 1] <= 10'b0;
+                
+                if(score <= 16'd9900)
+                    score<=score+16'd1000;
             end
             else begin
                 clear_row <= clear_row + 1;
