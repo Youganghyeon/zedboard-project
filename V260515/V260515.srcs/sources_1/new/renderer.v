@@ -25,7 +25,7 @@ always @(posedge clk) begin
         pix_data <= 24'h000000;         // È­¸é ¹Û
 
     else if (out_really)
-        pix_data <= 24'h808080;         // ¿ÏÀü ¹Ù±ù (È¸»ö)
+        pix_data <= 24'h000000;         // ¿ÏÀü ¹Ù±ù (È¸»ö)
 
     else if (out)
         pix_data <= 24'h800000;         // Å×µÎ¸® (»¡°£»ö)
@@ -45,7 +45,7 @@ always @(posedge clk) begin
         pix_data <= 24'h00FF00;         // °íÁ¤ ºí·Ï (ÃÊ·Ï»ö)
 
     else
-        pix_data <= 24'hFFFFFF;         // ºó Ä­ (Èò»ö)
+        pix_data <= 24'h000000;         // ºó Ä­ (°ËÀº»ö))
 
 end
 

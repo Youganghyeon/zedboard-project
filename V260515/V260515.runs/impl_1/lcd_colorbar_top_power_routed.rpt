@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Fri Jun  5 12:30:16 2026
+| Date             : Fri Jun  5 13:02:07 2026
 | Host             : DESKTOP-O1S0IG8 running 64-bit major release  (build 9200)
 | Command          : report_power -file lcd_colorbar_top_power_routed.rpt -pb lcd_colorbar_top_power_summary_routed.pb -rpx lcd_colorbar_top_power_routed.rpx
 | Design           : lcd_colorbar_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.225        |
+| Total On-Chip Power (W)  | 0.223        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.117        |
+| Dynamic (W)              | 0.116        |
 | Device Static (W)        | 0.108        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 82.4         |
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        5 |       --- |             --- |
-| Slice Logic    |     0.007 |     4645 |       --- |             --- |
-|   LUT as Logic |     0.006 |     3259 |     53200 |            6.13 |
+| Clocks         |     0.002 |        5 |       --- |             --- |
+| Slice Logic    |     0.006 |     4692 |       --- |             --- |
+|   LUT as Logic |     0.006 |     3291 |     53200 |            6.19 |
 |   CARRY4       |    <0.001 |      241 |     13300 |            1.81 |
 |   F7/F8 Muxes  |    <0.001 |      356 |     53200 |            0.67 |
-|   Register     |    <0.001 |      328 |    106400 |            0.31 |
+|   Register     |    <0.001 |      325 |    106400 |            0.31 |
 |   Others       |     0.000 |       11 |       --- |             --- |
-| Signals        |     0.007 |     3282 |       --- |             --- |
+| Signals        |     0.006 |     3323 |       --- |             --- |
 | PLL            |     0.098 |        1 |         4 |           25.00 |
 | I/O            |     0.004 |       35 |       200 |           17.50 |
 | Static Power   |     0.108 |          |           |                 |
-| Total          |     0.225 |          |           |                 |
+| Total          |     0.223 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.032 |       0.024 |      0.008 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.031 |       0.023 |      0.008 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.060 |       0.049 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -151,11 +151,11 @@ Table of Contents
 +------------------+-----------+
 | Name             | Power (W) |
 +------------------+-----------+
-| lcd_colorbar_top |     0.117 |
+| lcd_colorbar_top |     0.116 |
 |   clk_wiz_inst   |     0.098 |
 |     inst         |     0.098 |
 |   u_game_logic   |     0.008 |
-|   u_lcd_timing   |     0.007 |
+|   u_lcd_timing   |     0.006 |
 +------------------+-----------+
 
 

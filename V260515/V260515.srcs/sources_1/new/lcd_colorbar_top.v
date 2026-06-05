@@ -132,11 +132,15 @@ score_pic u_score_pic (
 );
 //------------------------------------------------------------
                                            // *(uint32_t*)(0x80
-                                           // #define REG (uint32_t*)(0x80000902)
+                                           // typedef struct{
+                                           // uint32_t I
+                                           //}A_REG_tbl
+                                           // A_REG_tbl A_REG
+                           
 // LCD 출력 ? 게임영역 / 점수패널 mux    ? 변경 A_REG->I &&(1U<<24)
 //------------------------------------------------------------
 wire [23:0] final_pix;
-wire [23:0] score_bg = (score_pix_data == 24'h000000) ? 24'h808080 : score_pix_data;
+wire [23:0] score_bg = (score_pix_data == 24'h000000) ? 24'h000000 : score_pix_data;
 assign final_pix = (pix_x >= 11'd520) ? score_bg : pix_data;
 assign rgb_lcd   = data_valid ? final_pix : 24'h000000;
 

@@ -138,18 +138,26 @@ localparam BG_X2  = START_X + GAP*3 + DIGIT_W + PAD;
 localparam BG_Y1  = START_Y - PAD;
 localparam BG_Y2  = START_Y + DIGIT_H + PAD;
 
+wire label_pixel;
+score_label u_label (
+    .pix_x    (pix_x),
+    .pix_y    (pix_y),
+    .pixel_on (label_pixel)
+);
+
 always @(posedge clk_in or negedge sys_rst_n) begin
     if (!sys_rst_n)
         pix_data <= BLACK;
     else begin
         if (seg0 || seg1 || seg2 || seg3)
             pix_data <= GOLD;
+        else if (label_pixel)
+            pix_data <= GOLD;
         else if ((pix_x >= BG_X1) && (pix_x < BG_X2) &&
                  (pix_y >= BG_Y1) && (pix_y < BG_Y2))
             pix_data <= BLUEBG;
         else
-            pix_data <= BLACK;  // 808080 없애고 BLACK으로
+            pix_data <= BLACK;
     end
 end
-
 endmodule
