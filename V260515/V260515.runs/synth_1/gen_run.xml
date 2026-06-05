@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1780285103" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/lcd_colorbar_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1780630093" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/lcd_colorbar_top.dcp">
   <File Type="PA-TCL" Name="lcd_colorbar_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="lcd_colorbar_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="lcd_colorbar_top_reports.tcl"/>
@@ -39,7 +39,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/score_pic_inst.v">
+    <File Path="$PSRCDIR/sources_1/new/score_pic.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

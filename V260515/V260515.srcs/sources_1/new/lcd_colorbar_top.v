@@ -119,7 +119,7 @@ renderer u_renderer (
     .pix_data           (pix_data)
 );
 //------------------------------------------------------------
-// SCORE PIC                                  ? 추가
+// SCORE PIC 추가 (1U<<28)
 //------------------------------------------------------------
 wire [23:0] score_pix_data;
 score_pic u_score_pic (
@@ -131,10 +131,13 @@ score_pic u_score_pic (
     .pix_data  (score_pix_data)
 );
 //------------------------------------------------------------
-// LCD 출력 ? 게임영역 / 점수패널 mux    ? 변경
+                                           // *(uint32_t*)(0x80
+                                           // #define REG (uint32_t*)(0x80000902)
+// LCD 출력 ? 게임영역 / 점수패널 mux    ? 변경 A_REG->I &&(1U<<24)
 //------------------------------------------------------------
 wire [23:0] final_pix;
-assign final_pix = (pix_x >= 11'd500) ? score_pix_data : pix_data;
+wire [23:0] score_bg = (score_pix_data == 24'h000000) ? 24'h808080 : score_pix_data;
+assign final_pix = (pix_x >= 11'd520) ? score_bg : pix_data;
 assign rgb_lcd   = data_valid ? final_pix : 24'h000000;
 
 endmodule

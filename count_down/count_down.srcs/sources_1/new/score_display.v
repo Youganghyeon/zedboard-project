@@ -119,7 +119,7 @@ always @(posedge clk_in or negedge sys_rst_n) begin
             clk_cnt <= 0;
 
             if(score < 9999)
-                score <= score + 1;
+                score <= score + 100;
         end
         else begin
             clk_cnt <= clk_cnt + 1;

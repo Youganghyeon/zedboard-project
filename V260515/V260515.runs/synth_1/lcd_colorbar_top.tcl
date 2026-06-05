@@ -95,7 +95,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.srcs/sources_1/new/game_logic.v
   C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.srcs/sources_1/new/lcd_timing.v
   C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.srcs/sources_1/new/renderer.v
-  C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.srcs/sources_1/new/score_pic_inst.v
+  C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.srcs/sources_1/new/score_pic.v
   C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.srcs/sources_1/new/lcd_colorbar_top.v
 }
 read_ip -quiet C:/Users/USER/Documents/GitHub/zedboard-project/zedboard-project/V260515/V260515.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
