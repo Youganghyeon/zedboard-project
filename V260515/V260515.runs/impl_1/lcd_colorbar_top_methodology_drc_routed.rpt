@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Fri Jun  5 13:02:06 2026
+| Date         : Mon Jun  8 12:24:15 2026
 | Host         : DESKTOP-O1S0IG8 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file lcd_colorbar_top_methodology_drc_routed.rpt -pb lcd_colorbar_top_methodology_drc_routed.pb -rpx lcd_colorbar_top_methodology_drc_routed.rpx
 | Design       : lcd_colorbar_top
@@ -41,7 +41,7 @@ u_lcd_timing/cnt_v_reg[4]/CLR, u_lcd_timing/cnt_v_reg[5]/CLR,
 u_lcd_timing/cnt_v_reg[6]/CLR, u_lcd_timing/cnt_v_reg[7]/CLR,
 u_lcd_timing/cnt_v_reg[8]/CLR, u_lcd_timing/cnt_v_reg[9]/CLR,
 u_score_pic/pix_data_reg[11]/CLR, u_score_pic/pix_data_reg[20]/CLR,
-u_score_pic/pix_data_reg[23]/CLR (the first 15 of 320 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+u_score_pic/pix_data_reg[23]/CLR (the first 15 of 326 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 

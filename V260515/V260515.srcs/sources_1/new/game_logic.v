@@ -200,6 +200,12 @@ wire rot_col =
 //------------------------------------------------------------
 reg [25:0] drop_counter;
 reg        drop_clk;
+reg [1:0] speed_level;
+wire [25:0] drop_limit =
+    (speed_level == 2'd0) ? 26'd33000000 :
+    (speed_level == 2'd1) ? 26'd16500000 :
+    (speed_level == 2'd2) ? 26'd8250000 :
+                            26'd3300000;
 
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
@@ -208,7 +214,7 @@ always @(posedge clk or negedge rst_n) begin
     end
     else begin
         drop_counter <= drop_counter + 1;
-        if (drop_counter == 26'd33000000) begin
+        if (drop_counter == drop_limit) begin
             drop_counter <= 0;
             drop_clk     <= 1;
         end
@@ -220,22 +226,28 @@ end
 //------------------------------------------------------------
 // BUTTON EDGE DETECT
 //------------------------------------------------------------
-reg key_left_d, key_right_d, key_rot_d;
-
+reg key_left_d, key_right_d, key_rot_d, key_speed_d;
 wire key_left_pulse  = (~key_in[1]) & key_left_d;
 wire key_right_pulse = (~key_in[3]) & key_right_d;
 wire key_rot_pulse   = (~key_in[0]) & key_rot_d;
+wire key_speed_pulse = (~key_in[2]) & key_speed_d;
 
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
         key_left_d  <= 1'b1;
         key_right_d <= 1'b1;
         key_rot_d   <= 1'b1;
+        key_speed_d <= 1'b1;
+        speed_level <= 2'b0;
     end
     else begin
-        key_left_d  <= key_in[1];
-        key_right_d <= key_in[3];
-        key_rot_d   <= key_in[0];
+        key_left_d       <= key_in[1];
+        key_right_d      <= key_in[3];
+        key_rot_d        <= key_in[0];
+        key_speed_d      <= key_in[2];
+        if (key_speed_pulse)
+           speed_level <= speed_level+1;
+        
     end
 end
 
@@ -282,7 +294,7 @@ always @(posedge clk or negedge rst_n) begin
 
             if (key_rot_pulse && !rot_col)
                 rotation <= rotation + 1;
-
+                
             if (drop_clk) begin
                 if (!drop_col)
                     block_y <= block_y - 1;
@@ -314,7 +326,8 @@ always @(posedge clk or negedge rst_n) begin
                 tetris_map[`TETRIS_H - 1] <= 10'b0;
                 
                 if(score <= 16'd9900)
-                    score<=score+16'd1000;
+                    score<=score+16'd100;
+                clear_row <= clear_row + 1;
             end
             else begin
                 clear_row <= clear_row + 1;
